@@ -140,12 +140,14 @@
       firefox
       thunderbird
       keepassxc
+      signal-desktop
       kate
       bibata-cursors
       davinci-resolve
       vscode
       python3
       jetbrains.pycharm-community
+      flutter
       godot_4
       libreoffice-qt
       steam
