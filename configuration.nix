@@ -145,6 +145,7 @@
       bibata-cursors
       davinci-resolve
       vscode
+      vscodium
       python3
       jetbrains.pycharm-community
       flutter
@@ -174,6 +175,11 @@
     gcc
     lshw
   ];
+
+  environment.sessionVariables = {
+    MOZ_USE_XINPUT2 = "1";
+  };
+
 
   programs.bash.shellAliases = {
 	editconfig = "sudo nvim /etc/nixos/configuration.nix";
