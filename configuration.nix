@@ -25,6 +25,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
@@ -53,8 +56,8 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
   };
 
 #------------------Nvidia Driver Settings------------------
@@ -129,7 +132,7 @@
   #Autoupdate
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-23.11";
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rajwol = {
@@ -160,6 +163,9 @@
       vlc
       mpg123
       texliveSmall
+      gimp
+      inkscape
+      github-desktop
     ];
   };
 
