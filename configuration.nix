@@ -148,7 +148,7 @@
       bibata-cursors
       davinci-resolve
       vscode
-      flutter
+      flutter 
       python3
       jetbrains.pycharm-community
       godot_4
