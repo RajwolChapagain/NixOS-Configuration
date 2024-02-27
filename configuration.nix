@@ -165,6 +165,7 @@
       gimp
       inkscape
       github-desktop
+      audacity
     ];
   };
 
