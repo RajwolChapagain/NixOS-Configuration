@@ -148,10 +148,9 @@
       bibata-cursors
       davinci-resolve
       vscode
-      vscodium
+      flutter
       python3
       jetbrains.pycharm-community
-      flutter
       godot_4
       libreoffice-qt
       steam
