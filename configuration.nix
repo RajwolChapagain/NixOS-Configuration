@@ -197,6 +197,7 @@
       enable = true;
       preferences = {
         "widget.use-xdg-desktop-portal.file-picker" = 1;
+	"media.hardware-video-decoding.force-enabled" = true;
       };
   };
 
