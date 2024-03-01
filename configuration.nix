@@ -185,7 +185,6 @@
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
-   #GTK_USE_PORTAL = "1";
   };
 
 
