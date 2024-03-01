@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -171,14 +170,6 @@
     ];
   };
   
-  home-manager.users.rajwol = { pkgs, ... }: {
-    home.packages = [ pkgs.atool pkgs.httpie ];
-    programs.bash.enable = true;
-    # The state version is required and should stay at the version you
-    # originally installed.
-    home.stateVersion = "23.11";
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -194,6 +185,7 @@
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
+    GTK_USE_PORTAL = "1";
   };
 
 
