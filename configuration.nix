@@ -187,7 +187,6 @@
     MOZ_USE_XINPUT2 = "1";
   };
 
-
   programs.bash.shellAliases = {
 	editconfig = "sudo nvim /etc/nixos/configuration.nix";
 	rebuild = "sudo nixos-rebuild switch";
