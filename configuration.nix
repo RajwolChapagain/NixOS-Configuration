@@ -167,6 +167,8 @@
       inkscape
       github-desktop
       audacity
+      yakuake
+      tldr
     ];
   };
   
