@@ -154,8 +154,6 @@
       jetbrains.pycharm-community
       godot_4
       libreoffice-qt
-      steam
-      lutris
       mangohud
       gamemode
       goverlay
@@ -181,7 +179,6 @@
     neofetch
     git
     gcc
-    lshw
   ];
 
   environment.sessionVariables = {
@@ -202,7 +199,10 @@
       };
   };
 
-  programs.kdeconnect.enable = true;
+  programs.steam = {
+	enable = true;
+  };
+
   virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
