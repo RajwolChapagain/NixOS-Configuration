@@ -164,7 +164,7 @@
       gimp
       inkscape
       github-desktop
-      audacity
+      tenacity
       tldr
     ];
   };
