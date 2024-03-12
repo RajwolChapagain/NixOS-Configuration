@@ -165,7 +165,6 @@
       inkscape
       github-desktop
       tenacity
-      tldr
     ];
   };
   
@@ -180,6 +179,8 @@
     git
     gcc
     gdb
+    bat
+    tldr
   ];
 
   environment.sessionVariables = {
