@@ -165,6 +165,7 @@
       inkscape
       github-desktop
       tenacity
+      helvetica-neue-lt-std
     ];
   };
   
