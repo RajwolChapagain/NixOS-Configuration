@@ -166,6 +166,7 @@
       github-desktop
       tenacity
       helvetica-neue-lt-std
+      zoom-us
     ];
   };
   
@@ -179,6 +180,7 @@
     neofetch
     git
     gcc
+    clang-tools
     gdb
     bat
     tldr
