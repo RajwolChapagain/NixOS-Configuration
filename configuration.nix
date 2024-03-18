@@ -141,32 +141,6 @@
     description = "Rajwol Chapagain";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      firefox
-      thunderbird
-      keepassxc
-      signal-desktop
-      kate
-      bibata-cursors
-      davinci-resolve
-      vscode
-      flutter
-      python3
-      jetbrains.pycharm-community
-      godot_4
-      libreoffice-qt
-      mangohud
-      gamemode
-      goverlay
-      obs-studio
-      vlc
-      mpg123
-      texliveSmall
-      gimp
-      inkscape
-      github-desktop
-      tenacity
-      helvetica-neue-lt-std
-      zoom-us
     ];
   };
   
@@ -184,6 +158,32 @@
     gdb
     bat
     tldr
+    firefox
+    thunderbird
+    keepassxc
+    signal-desktop
+    kate
+    bibata-cursors
+    davinci-resolve
+    vscode
+    flutter
+    python3
+    jetbrains.pycharm-community
+    godot_4
+    libreoffice-qt
+    mangohud
+    gamemode
+    goverlay
+    obs-studio
+    vlc
+    mpg123
+    texliveSmall
+    gimp
+    inkscape
+    github-desktop
+    tenacity
+    helvetica-neue-lt-std
+    zoom-us
   ];
 
   environment.sessionVariables = {
