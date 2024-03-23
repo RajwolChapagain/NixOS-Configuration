@@ -176,8 +176,7 @@
     goverlay
     obs-studio
     vlc
-    mpg123
-    texliveSmall
+    mpg123 
     gimp
     inkscape
     github-desktop
