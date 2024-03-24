@@ -184,6 +184,7 @@
     helvetica-neue-lt-std
     zoom-us
     zoxide
+    fzf
   ];
 
   environment.sessionVariables = {
