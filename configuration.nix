@@ -224,6 +224,10 @@
 	clean = "sudo nix-collect-garbage --delete-old";
     };
 
+    ohMyZsh = {
+	enable = true;
+	theme = "refined";
+    };
   };
 
   virtualisation.docker.enable = true;
