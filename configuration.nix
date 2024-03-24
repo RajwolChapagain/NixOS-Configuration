@@ -183,6 +183,7 @@
     tenacity
     helvetica-neue-lt-std
     zoom-us
+    zoxide
   ];
 
   environment.sessionVariables = {
@@ -193,6 +194,7 @@
 	editconfig = "sudo nvim /etc/nixos/configuration.nix";
 	rebuild = "sudo nixos-rebuild switch";
 	clean = "sudo nix-collect-garbage --delete-old";
+	cd = "z";
   };
 
   programs.firefox = {
