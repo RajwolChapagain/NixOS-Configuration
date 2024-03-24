@@ -135,11 +135,14 @@
   system.autoUpgrade.allowReboot = false;
   system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable";
 
+  users.defaultUserShell = pkgs.zsh;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rajwol = {
     isNormalUser = true;
     description = "Rajwol Chapagain";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    useDefaultShell = true;
     packages = with pkgs; [
     ];
   };
@@ -208,6 +211,19 @@
 
   programs.steam = {
 	enable = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    enableCompletion = true;
+    shellAliases = {
+	editconfig = "sudo nvim /etc/nixos/configuration.nix";
+	rebuild = "sudo nixos-rebuild switch";
+	clean = "sudo nix-collect-garbage --delete-old";
+    };
+
   };
 
   virtualisation.docker.enable = true;
