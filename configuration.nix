@@ -188,6 +188,7 @@
     zoom-us
     zoxide
     fzf
+    zsh-powerlevel10k
   ];
 
   environment.sessionVariables = {
@@ -224,9 +225,9 @@
 	clean = "sudo nix-collect-garbage --delete-old";
     };
 
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     ohMyZsh = {
 	enable = true;
-	theme = "refined";
     };
   };
 
