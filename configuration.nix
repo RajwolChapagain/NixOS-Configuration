@@ -189,6 +189,8 @@
     zoxide
     fzf
     zsh-powerlevel10k
+    kdePackages.kcalc
+    gnome.gnome-software
   ];
 
   environment.sessionVariables = {
@@ -230,6 +232,8 @@
 	enable = true;
     };
   };
+  
+  services.flatpak.enable = true;
 
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
