@@ -191,6 +191,7 @@
     zsh-powerlevel10k
     kdePackages.kcalc
     gnome.gnome-software
+    distrobox
   ];
 
   environment.sessionVariables = {
@@ -246,7 +247,7 @@
   # };
 
   # List services that you want to enable:
-
+  services.auto-cpufreq.enable = true;
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
