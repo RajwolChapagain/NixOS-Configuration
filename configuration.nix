@@ -192,18 +192,10 @@
     kdePackages.kcalc
     gnome.gnome-software
     distrobox
-    onedriver
   ];
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
-  };
-
-  programs.bash.shellAliases = {
-	editconfig = "sudo nvim /etc/nixos/configuration.nix";
-	rebuild = "sudo nixos-rebuild switch";
-	clean = "sudo nix-collect-garbage --delete-old";
-	cd = "z";
   };
 
   programs.firefox = {
@@ -224,9 +216,10 @@
     syntaxHighlighting.enable = true;
     enableCompletion = true;
     shellAliases = {
-	editconfig = "sudo nvim /etc/nixos/configuration.nix";
-	rebuild = "sudo nixos-rebuild switch";
-	clean = "sudo nix-collect-garbage --delete-old";
+	editconfig = "sudo nvim /home/rajwol/.dotfiles/configuration.nix";
+	rebuild = "sudo nixos-rebuild switch --flake /home/rajwol/.dotfiles/";
+	clean = "sudo nix-collect-garbage";
+	wipe = "sudo nix-collect-garbage --delete-old";
     };
 
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
