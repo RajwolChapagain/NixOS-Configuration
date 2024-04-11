@@ -192,6 +192,7 @@
     kdePackages.kcalc
     gnome.gnome-software
     distrobox
+    papirus-icon-theme
   ];
 
   environment.sessionVariables = {
