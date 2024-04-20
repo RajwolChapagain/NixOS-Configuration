@@ -193,6 +193,7 @@
     gnome.gnome-software
     distrobox
     papirus-icon-theme
+    blanket
   ];
 
   environment.sessionVariables = {
