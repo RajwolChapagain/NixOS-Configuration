@@ -220,6 +220,7 @@
     shellAliases = {
 	editconfig = "sudo nvim /home/rajwol/.dotfiles/configuration.nix";
 	rebuild = "sudo nixos-rebuild switch --flake /home/rajwol/.dotfiles/";
+	update = "sudo nix flake update /home/rajwol/.dotfiles/flake.nix";
 	clean = "sudo nix-collect-garbage";
 	wipe = "sudo nix-collect-garbage --delete-old";
     };
@@ -245,7 +246,6 @@
   # };
 
   # List services that you want to enable:
-  services.auto-cpufreq.enable = true;
   services.onedrive.enable = true;
 
   # Enable the OpenSSH daemon.
