@@ -173,7 +173,7 @@
     python3
     jetbrains.pycharm-community
     godot_4
-    libreoffice-qt
+    libreoffice-qt-fresh
     mangohud
     gamemode
     goverlay
@@ -184,7 +184,6 @@
     inkscape
     github-desktop
     tenacity
-    helvetica-neue-lt-std
     zoom-us
     zoxide
     fzf
@@ -192,8 +191,12 @@
     kdePackages.kcalc
     gnome.gnome-software
     distrobox
-    papirus-icon-theme
     blanket
+  ];
+
+  fonts.packages = with pkgs; [
+    fira
+    roboto
   ];
 
   environment.sessionVariables = {
