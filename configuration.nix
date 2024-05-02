@@ -169,7 +169,6 @@
     bibata-cursors
     davinci-resolve
     vscode
-    flutter
     python3
     jetbrains.pycharm-community
     godot_4
@@ -192,6 +191,7 @@
     gnome.gnome-software
     distrobox
     blanket
+    lutris
   ];
 
   fonts.packages = with pkgs; [
