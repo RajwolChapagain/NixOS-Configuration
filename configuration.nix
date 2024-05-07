@@ -236,8 +236,8 @@
   
   services.flatpak.enable = true;
 
-  virtualisation.docker.enable = true;
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.docker.enable = false;
+  virtualisation.virtualbox.host.enable = false;
 
   fonts.fontDir.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
