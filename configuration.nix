@@ -192,6 +192,7 @@
     distrobox
     blanket
     lutris
+    krita
   ];
 
   fonts.packages = with pkgs; [
