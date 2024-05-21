@@ -193,6 +193,7 @@
     blanket
     lutris
     krita
+    slack
   ];
 
   fonts.packages = with pkgs; [
