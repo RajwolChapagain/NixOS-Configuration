@@ -194,6 +194,7 @@
     lutris
     krita
     slack
+    blender
   ];
 
   fonts.packages = with pkgs; [
