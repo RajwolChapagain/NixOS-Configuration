@@ -195,6 +195,7 @@
     krita
     slack
     blender
+    gnome.adwaita-icon-theme
   ];
 
   fonts.packages = with pkgs; [
