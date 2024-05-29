@@ -141,7 +141,7 @@
   users.users.rajwol = {
     isNormalUser = true;
     description = "Rajwol Chapagain";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "adbusers" ];
     useDefaultShell = true;
     packages = with pkgs; [
     ];
@@ -196,6 +196,7 @@
     slack
     blender
     gnome.adwaita-icon-theme
+    scrcpy
   ];
 
   fonts.packages = with pkgs; [
@@ -237,6 +238,8 @@
 	enable = true;
     };
   };
+  
+  programs.adb.enable = true;
   
   services.flatpak.enable = true;
 
