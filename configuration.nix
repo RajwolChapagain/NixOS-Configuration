@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./systemPackages.nix
+      ./nvidia.nix
     ];
 
   # Bootloader.
@@ -61,52 +63,6 @@
     xkb.variant = "";
   };
 
-#------------------Nvidia Driver Settings------------------
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
-
-  hardware.nvidia.prime = {
-    # Make sure to use the correct Bus ID values for your system!
-    sync.enable = true;
-    amdgpuBusId = "PCI:6:0:0";
-    nvidiaBusId = "PCI:1:0:0";
-  };
-
-  hardware.nvidia = {
-
-    # Modesetting is required.
-    modesetting.enable = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    powerManagement.enable = false;
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    # Use the NVidia open source kernel module (not to be confused with the
-    # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
-    # Only available from driver 515.43.04+
-    # Currently alpha-quality/buggy, so false is currently the recommended setting.
-    open = false;
-
-    # Enable the Nvidia settings menu,
-	# accessible via `nvidia-settings`.
-    nvidiaSettings = true;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
-#------------------End of Nvidia------------------
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -130,11 +86,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  #Autoupdate
-  #system.autoUpgrade.enable = true;
-  #system.autoUpgrade.allowReboot = false;
-  #system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable";
-
   users.defaultUserShell = pkgs.zsh;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -147,59 +98,6 @@
     ];
   };
   
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    neovim
-    neofetch
-    git
-    gcc
-    clang-tools
-    gdb
-    bat
-    tldr
-    firefox
-    thunderbird
-    keepassxc
-    signal-desktop
-    kate
-    bibata-cursors
-    davinci-resolve
-    vscode
-    python3
-    jetbrains.pycharm-community
-    godot_4
-    libreoffice-qt-fresh
-    mangohud
-    gamemode
-    goverlay
-    obs-studio
-    vlc
-    mpg123 
-    gimp
-    inkscape
-    github-desktop
-    tenacity
-    zoom-us
-    zoxide
-    fzf
-    zsh-powerlevel10k
-    kdePackages.kcalc
-    gnome.gnome-software
-    distrobox
-    blanket
-    lutris
-    krita
-    slack
-    blender
-    gnome.adwaita-icon-theme
-    scrcpy
-    wl-clipboard
-  ];
-
   fonts.packages = with pkgs; [
     fira
     roboto
