@@ -197,6 +197,7 @@
     blender
     gnome.adwaita-icon-theme
     scrcpy
+    wl-clipboard
   ];
 
   fonts.packages = with pkgs; [
