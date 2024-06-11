@@ -48,6 +48,5 @@
 	gnome.adwaita-icon-theme
 	scrcpy
 	wl-clipboard
-	nh
       ];
 }

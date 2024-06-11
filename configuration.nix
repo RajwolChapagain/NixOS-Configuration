@@ -137,6 +137,11 @@
 	enable = true;
     };
   };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/rajwol/.dotfiles";
+  };
   
   programs.adb.enable = true;
   
