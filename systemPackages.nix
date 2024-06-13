@@ -39,7 +39,6 @@
 	zsh-powerlevel10k
 	kdePackages.kcalc
 	gnome.gnome-software
-	distrobox
 	blanket
 	lutris
 	krita
