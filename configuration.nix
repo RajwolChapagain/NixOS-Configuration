@@ -92,7 +92,7 @@
   users.users.rajwol = {
     isNormalUser = true;
     description = "Rajwol Chapagain";
-    extraGroups = [ "networkmanager" "wheel" "docker" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
     useDefaultShell = true;
     packages = with pkgs; [
     ];
@@ -146,9 +146,6 @@
   programs.adb.enable = true;
   
   services.flatpak.enable = true;
-
-  virtualisation.docker.enable = false;
-  virtualisation.virtualbox.host.enable = false;
 
   fonts.fontDir.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
