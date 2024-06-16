@@ -48,5 +48,6 @@
 	scrcpy
 	wl-clipboard
 	atlauncher
+	jdk
       ];
 }
