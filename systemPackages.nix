@@ -47,5 +47,6 @@
 	gnome.adwaita-icon-theme
 	scrcpy
 	wl-clipboard
+	atlauncher
       ];
 }
