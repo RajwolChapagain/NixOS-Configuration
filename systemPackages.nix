@@ -38,7 +38,6 @@
 	fzf
 	zsh-powerlevel10k
 	kdePackages.kcalc
-	gnome.gnome-software
 	blanket
 	lutris
 	krita
