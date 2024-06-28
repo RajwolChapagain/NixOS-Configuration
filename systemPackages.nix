@@ -47,6 +47,7 @@
 	scrcpy
 	wl-clipboard
 	atlauncher
-	jdk
+	jdk17
+	android-studio
       ];
 }
