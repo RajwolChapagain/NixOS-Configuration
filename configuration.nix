@@ -101,6 +101,7 @@
   fonts.packages = with pkgs; [
     fira
     roboto
+    nerdfonts
   ];
 
   environment.sessionVariables = {
