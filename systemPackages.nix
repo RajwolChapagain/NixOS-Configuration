@@ -49,5 +49,6 @@
 	atlauncher
 	jdk17
 	android-studio
+	kitty
       ];
 }
