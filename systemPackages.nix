@@ -50,5 +50,6 @@
 	jdk17
 	android-studio
 	kitty
+	ripgrep
       ];
 }
