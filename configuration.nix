@@ -106,6 +106,7 @@
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
+    EDITOR = "nvim";
   };
 
   programs.firefox = {
@@ -131,6 +132,7 @@
 	update = "sudo nix flake update /home/rajwol/.dotfiles/";
 	clean = "sudo nix-collect-garbage";
 	wipe = "sudo nix-collect-garbage --delete-old";
+	ls = "ls --hyperlink=auto --color=tty";
     };
 
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
