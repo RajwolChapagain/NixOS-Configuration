@@ -4,6 +4,7 @@
  
     environment.systemPackages = with pkgs; [
 	neovim
+	vimPlugins.packer-nvim
 	neofetch
 	git
 	gcc
