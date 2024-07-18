@@ -52,5 +52,6 @@
 	android-studio
 	kitty
 	eza
+	cudaPackages_11.cudatoolkit
     ];
 }
