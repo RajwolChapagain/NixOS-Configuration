@@ -52,8 +52,6 @@
 	android-studio
 	kitty
 	eza
-	cudaPackages_11.cudatoolkit
-	conda
 	python312Packages.python-lsp-server
     ];
 }
