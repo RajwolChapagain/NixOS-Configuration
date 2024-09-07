@@ -53,5 +53,6 @@
 	kitty
 	eza
 	python312Packages.python-lsp-server
+	rclone
     ];
 }

@@ -116,10 +116,6 @@
       };
   };
 
-  programs.steam = {
-	enable = true;
-  };
-
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
@@ -156,7 +152,7 @@
   # };
 
   # List services that you want to enable:
-  services.onedrive.enable = true;
+  services.flatpak.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
