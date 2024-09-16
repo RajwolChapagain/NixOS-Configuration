@@ -128,8 +128,8 @@
 	clean = "sudo nix-collect-garbage";
 	wipe = "sudo nix-collect-garbage --delete-old";
 	ls = "eza --icons";
-	push_pw = "rclone copy ~/Documents/Passwords.kdbx remote:";
-	pull_pw = "rclone copy remote:Passwords.kdbx ~/Documents/";
+	push_pw = "rclone copy ~/Documents/Passwords.kdbx remote:Personal/";
+	pull_pw = "rclone copy remote:Personal/Passwords.kdbx ~/Documents/";
     };
 
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
