@@ -54,5 +54,6 @@
 	eza
 	python312Packages.python-lsp-server
 	rclone
+	distrobox
     ];
 }
