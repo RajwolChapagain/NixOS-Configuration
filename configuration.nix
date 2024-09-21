@@ -91,7 +91,7 @@
   users.users.rajwol = {
     isNormalUser = true;
     description = "Rajwol Chapagain";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "docker"];
     useDefaultShell = true;
     packages = with pkgs; [
     ];
