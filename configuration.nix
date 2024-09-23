@@ -91,7 +91,7 @@
   users.users.rajwol = {
     isNormalUser = true;
     description = "Rajwol Chapagain";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "adbusers"];
     useDefaultShell = true;
     packages = with pkgs; [
     ];
@@ -146,8 +146,11 @@
   programs.adb.enable = true;
   programs.steam.enable = true;
 
-  virtualisation.docker.enable = true;
-  
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+ 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
