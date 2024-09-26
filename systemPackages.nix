@@ -40,7 +40,6 @@
 	zsh-powerlevel10k
 	kdePackages.kcalc
 	blanket
-	lutris
 	krita
 	slack
 	blender
