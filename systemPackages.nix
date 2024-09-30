@@ -54,5 +54,6 @@
 	python312Packages.python-lsp-server
 	rclone
 	distrobox
+	cudaPackages.cudatoolkit
     ];
 }
