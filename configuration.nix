@@ -150,6 +150,19 @@
     enable = true;
     dockerCompat = true;
   };
+
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+       governor = "powersave";
+       turbo = "never";
+    };
+    charger = {
+       governor = "performance";
+       turbo = "auto";
+    };
+  };
+
  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
