@@ -2,7 +2,7 @@
 	description = "System flake";
 
 	inputs = {
-		nixpkgs.url = "nixpkgs/nixpkgs-24.05-darwin";
+		nixpkgs.url = "nixpkgs/nixpkgs-unstable";
 	};	
 
 	outputs = { self, nixpkgs, ... }:
