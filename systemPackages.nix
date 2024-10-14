@@ -25,5 +25,6 @@
         kitty
         eza
         rclone
+        inkscape
     ];
 }
