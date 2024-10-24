@@ -26,5 +26,10 @@
         eza
         rclone
         inkscape
+        (retroarch.override {
+            cores = with libretro; [
+              snes9x
+            ];
+        })
     ];
 }
