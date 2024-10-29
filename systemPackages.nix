@@ -31,5 +31,7 @@
               snes9x
             ];
         })
+        texliveFull
+        texmaker
     ];
 }
