@@ -33,5 +33,6 @@
         })
         texliveFull
         texmaker
+        libreoffice-qt6
     ];
 }
