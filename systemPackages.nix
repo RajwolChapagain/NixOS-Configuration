@@ -34,5 +34,6 @@
         texliveFull
         texmaker
         libreoffice-qt6
+        gcc
     ];
 }
