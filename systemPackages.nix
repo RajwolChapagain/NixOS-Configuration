@@ -36,5 +36,6 @@
         libreoffice-qt6
         gcc
         godot_4
+        krita
     ];
 }
