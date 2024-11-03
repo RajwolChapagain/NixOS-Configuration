@@ -35,5 +35,6 @@
         texmaker
         libreoffice-qt6
         gcc
+        godot_4
     ];
 }
