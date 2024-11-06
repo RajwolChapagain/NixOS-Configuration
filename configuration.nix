@@ -103,7 +103,7 @@
         syntaxHighlighting.enable = true;
         enableCompletion = true;
         shellAliases = {
-            editconfig = "sudo nvim /home/rajwol/.dotfiles/configuration.nix";
+            editconf = "sudo nvim /home/rajwol/.dotfiles/configuration.nix";
             rebuild = "sudo nixos-rebuild switch --flake /home/rajwol/.dotfiles/";
             update = "sudo nix flake update /home/rajwol/.dotfiles/";
             clean = "sudo nix-collect-garbage";
