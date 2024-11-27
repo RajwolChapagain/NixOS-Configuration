@@ -37,5 +37,6 @@
         gcc
         godot_4
         krita
+        mpg123
     ];
 }
