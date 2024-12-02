@@ -38,5 +38,6 @@
         godot_4
         krita
         mpg123
+        github-desktop
     ];
 }
