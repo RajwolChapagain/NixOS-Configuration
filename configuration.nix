@@ -76,9 +76,7 @@
     };
 
     fonts.packages = with pkgs; [
-        fira
-        roboto
-        nerdfonts
+        nerd-fonts.symbols
     ];
 
     environment.sessionVariables = {
