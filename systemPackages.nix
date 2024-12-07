@@ -39,5 +39,6 @@
         krita
         mpg123
         github-desktop
+        vscode.fhs
     ];
 }
