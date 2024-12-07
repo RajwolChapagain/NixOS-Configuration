@@ -4,20 +4,17 @@
  
     environment.systemPackages = with pkgs; [
         neovim
-        neofetch
         git
         bat
         thunderbird
         keepassxc
         signal-desktop
-        kate
         python3
         mangohud
         gamemode
         goverlay
         zoom-us
         zoxide
-        fzf
         zsh-powerlevel10k
         slack
         adwaita-icon-theme
@@ -29,8 +26,6 @@
         (retroarch.withCores (cores: with cores; [
               snes9x
         ]))
-        texliveFull
-        texmaker
         libreoffice-qt6
         gcc
         godot_4
