@@ -76,7 +76,7 @@
     };
 
     fonts.packages = with pkgs; [
-        nerd-fonts.symbols
+        nerd-fonts.symbols-only
     ];
 
     environment.sessionVariables = {
