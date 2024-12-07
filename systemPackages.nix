@@ -26,11 +26,9 @@
         eza
         rclone
         inkscape
-        (retroarch.override {
-            cores = with libretro; [
+        (retroarch.withCores (cores: with cores; [
               snes9x
-            ];
-        })
+        ]))
         texliveFull
         texmaker
         libreoffice-qt6
