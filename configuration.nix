@@ -21,7 +21,10 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 
   security.rtkit.enable = true;
   services.pipewire = {
