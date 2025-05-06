@@ -18,6 +18,9 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
   users.users.rajwol = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
