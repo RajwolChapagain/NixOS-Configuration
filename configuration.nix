@@ -16,10 +16,12 @@
 
   time.timeZone = "America/New_York";
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  services.displayManager.sddm.wayland.enable = true;
 
   security.rtkit.enable = true;
   services.pipewire = {
