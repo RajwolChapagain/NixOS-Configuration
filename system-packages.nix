@@ -16,5 +16,7 @@
     firefox
     wofi
     waybar
+    dunst
+    libnotify
   ];
 }
