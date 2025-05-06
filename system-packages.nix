@@ -18,5 +18,6 @@
     waybar
     dunst
     libnotify
+    networkmanagerapplet
   ];
 }
