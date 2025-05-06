@@ -15,5 +15,6 @@
     kitty
     firefox
     wofi
+    waybar
   ];
 }
