@@ -13,5 +13,6 @@
     git
     kitty
     firefox
+    wofi
   ];
 }
