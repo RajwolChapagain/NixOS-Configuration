@@ -23,6 +23,10 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "24.11"; # DO NOT CHANGE
