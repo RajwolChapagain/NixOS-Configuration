@@ -5,6 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ./system-packages.nix
+      ./nvidia.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -14,6 +15,8 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/New_York";
+
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   users.users.rajwol = {
     isNormalUser = true;
