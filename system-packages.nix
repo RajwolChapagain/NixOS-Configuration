@@ -19,5 +19,6 @@
     dunst
     libnotify
     networkmanagerapplet
+    swww
   ];
 }
