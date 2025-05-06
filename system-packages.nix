@@ -12,5 +12,6 @@
     neovim
     git
     kitty
+    firefox
   ];
 }
