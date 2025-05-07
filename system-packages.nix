@@ -22,5 +22,6 @@
     swww
     brightnessctl
     kdePackages.dolphin
+    pavucontrol
   ];
 }
