@@ -21,5 +21,6 @@
     networkmanagerapplet
     swww
     brightnessctl
+    kdePackages.dolphin
   ];
 }
