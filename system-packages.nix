@@ -20,5 +20,6 @@
     libnotify
     networkmanagerapplet
     swww
+    brightnessctl
   ];
 }
