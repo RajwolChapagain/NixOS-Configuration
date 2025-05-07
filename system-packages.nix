@@ -24,6 +24,7 @@
 			rebuild = "sudo nixos-rebuild switch";
 			update = "sudo nix flake update /etc/nixos/";
 		};
+		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 	};
 
 	programs.zoxide = {
@@ -39,5 +40,6 @@
 			thunderbird
 			keepassxc
 			eza
+			zsh-powerlevel10k
 	];
 }
