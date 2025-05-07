@@ -23,5 +23,6 @@
     brightnessctl
     kdePackages.dolphin
     pavucontrol
+    thunderbird
   ];
 }
