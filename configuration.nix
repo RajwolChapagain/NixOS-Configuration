@@ -35,6 +35,8 @@
     jack.enable = true;
   };
 
+  services.power-profiles-daemon.enable = true;
+
   users.users.rajwol = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
