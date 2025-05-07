@@ -16,15 +16,17 @@
 
   time.timeZone = "America/New_York";
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
   services.xserver.videoDrivers = [ "nvidia" ];
 
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    settings = {
+      General.DisplayServer = "wayland";
+    };
   };
+
+  services.desktopManager.plasma6.enable = true;
 
   security.rtkit.enable = true;
   services.pipewire = {
@@ -34,8 +36,6 @@
     pulse.enable = true;
     jack.enable = true;
   };
-
-  services.power-profiles-daemon.enable = true;
 
   users.users.rajwol = {
     isNormalUser = true;
@@ -49,6 +49,11 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    elisa
+    konsole
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
