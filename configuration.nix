@@ -28,6 +28,8 @@
 
   services.desktopManager.plasma6.enable = true;
 
+  services.onedrive.enable = true;
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -48,6 +50,8 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    MOZ_USE_XINPUT2 = "1";
+    EDITOR = "nvim";
   };
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
