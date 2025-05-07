@@ -19,6 +19,10 @@
 		enable = true;
 		shellAliases = {
 			ls = "eza --icons";
+			ec = "sudo nvim /etc/nixos/configuration.nix";
+			ep = "sudo nvim /etc/nixos/system-packages.nix";
+			rebuild = "sudo nixos-rebuild switch";
+			update = "sudo nix flake update /etc/nixos/";
 		};
 	};
 
