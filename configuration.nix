@@ -40,6 +40,10 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.symbols-only
+  ];
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
