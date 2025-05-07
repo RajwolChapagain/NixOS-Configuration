@@ -53,6 +53,7 @@
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     elisa
     konsole
+    plasma-browser-integration
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
