@@ -41,5 +41,7 @@
 			keepassxc
 			eza
 			zsh-powerlevel10k
+			godot
+			github-desktop
 	];
 }
