@@ -33,6 +33,8 @@
 		flags = [ "--cmd cd" ];
 	};
 
+	programs.obs-studio.enable = true;
+
 	environment.systemPackages = with pkgs; [
 		neovim
 		git
@@ -43,5 +45,6 @@
 		zsh-powerlevel10k
 		godot
 		github-desktop
+		vlc
 	];
 }
