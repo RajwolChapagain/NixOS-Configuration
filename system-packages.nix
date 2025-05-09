@@ -35,13 +35,13 @@
 
 	environment.systemPackages = with pkgs; [
 		neovim
-			git
-			kitty
-			thunderbird
-			keepassxc
-			eza
-			zsh-powerlevel10k
-			godot
-			github-desktop
+		git
+		kitty
+		thunderbird
+		keepassxc
+		eza
+		zsh-powerlevel10k
+		godot
+		github-desktop
 	];
 }

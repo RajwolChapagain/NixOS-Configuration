@@ -1,12 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
-	imports =
-		[ 
+	imports = [ 
 		./hardware-configuration.nix
-			./system-packages.nix
-			./nvidia.nix
-		];
+		./system-packages.nix
+		./nvidia.nix
+	];
 
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
