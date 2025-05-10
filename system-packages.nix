@@ -46,5 +46,6 @@
 		godot
 		github-desktop
 		vlc
+		signal-desktop
 	];
 }
