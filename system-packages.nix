@@ -47,5 +47,7 @@
 		github-desktop
 		vlc
 		signal-desktop
+		inkscape
+		adwaita-icon-theme
 	];
 }
