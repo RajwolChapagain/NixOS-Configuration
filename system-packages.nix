@@ -35,6 +35,8 @@
 
 	programs.obs-studio.enable = true;
 
+	programs.bat.enable = true;
+
 	environment.systemPackages = with pkgs; [
 		neovim
 		git
