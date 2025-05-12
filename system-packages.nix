@@ -21,7 +21,12 @@
 			ls = "eza --icons";
 			ec = "sudo nvim /etc/nixos/configuration.nix";
 			ep = "sudo nvim /etc/nixos/system-packages.nix";
-			rebuild = "sudo nixos-rebuild switch";
+			# The cache clearing + kbuildsycoc6 updates application menu links
+			rebuild = ''
+				sudo nixos-rebuild switch
+				rm -rf ~/.cache/ksycoca6_*
+				kbuildsycoca6
+			'';
 			update = "sudo nix flake update /etc/nixos/";
 			ssh = "kitten ssh";
 		};
