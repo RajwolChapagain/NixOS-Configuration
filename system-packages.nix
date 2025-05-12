@@ -52,5 +52,6 @@
 		signal-desktop
 		inkscape
 		adwaita-icon-theme
+		krita
 	];
 }
