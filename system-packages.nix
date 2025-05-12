@@ -73,5 +73,6 @@
 		adwaita-icon-theme
 		krita
 		nix-output-monitor
+		blender
 	];
 }
