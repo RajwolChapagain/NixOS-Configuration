@@ -23,7 +23,7 @@
 			ep = "sudo nvim /etc/nixos/system-packages.nix";
 			# The cache clearing + kbuildsycoc6 updates application menu links
 			rebuild = ''
-				sudo nixos-rebuild switch
+				sudo nixos-rebuild switch |& nom
 				rm -rf ~/.cache/ksycoca6_*
 				kbuildsycoca6
 			'';
@@ -58,5 +58,6 @@
 		inkscape
 		adwaita-icon-theme
 		krita
+		nix-output-monitor
 	];
 }
