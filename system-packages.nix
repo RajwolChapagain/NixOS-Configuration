@@ -24,7 +24,7 @@
 			# The cache clearing + kbuildsycoc6 updates application menu links
 			rebuild = ''
 				set -o pipefail
-				sudo nixos-rebuild switch
+				sudo nixos-rebuild switch |& nom
 				if [[ $? -eq 0 ]]; then
 					echo -e "\n🎉 Rebuild successful! Enter commit message: "
 					read commit_msg
