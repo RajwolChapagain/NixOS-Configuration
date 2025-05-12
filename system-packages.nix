@@ -26,7 +26,10 @@
 				set -o pipefail
 				sudo nixos-rebuild switch |& nom
 				if [[ $? -eq 0 ]]; then
-					echo -e "\n🎉 Rebuild successful! Enter commit message: "
+					echo -e "\n🎉 Rebuild successful! Summary of changes: "
+					git diff
+
+					echo -e "\n💬 Enter a commit message: "
 					read commit_msg
 					
 					if [[ -n "$commit_msg" ]]; then
