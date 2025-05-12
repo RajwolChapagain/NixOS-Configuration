@@ -26,7 +26,7 @@
 				set -o pipefail
 				sudo nixos-rebuild switch
 				if [[ $? -eq 0 ]]; then
-					echo "Rebuild successful. Enter commit msg: "
+					echo -e "\n🎉 Rebuild successful! Enter commit message: "
 					read commit_msg
 					
 					if [[ -n "$commit_msg" ]]; then
@@ -73,6 +73,5 @@
 		adwaita-icon-theme
 		krita
 		nix-output-monitor
-		blender
 	];
 }
