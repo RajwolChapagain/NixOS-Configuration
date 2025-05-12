@@ -23,9 +23,23 @@
 			ep = "sudo nvim /etc/nixos/system-packages.nix";
 			# The cache clearing + kbuildsycoc6 updates application menu links
 			rebuild = ''
-				sudo nixos-rebuild switch |& nom
-				rm -rf ~/.cache/ksycoca6_*
-				kbuildsycoca6
+				set -o pipefail
+				sudo nixos-rebuild switch
+				if [[ $? -eq 0 ]]; then
+					echo "Rebuild successful. Enter commit msg: "
+					read commit_msg
+					
+					if [[ -n "$commit_msg" ]]; then
+						git -C /etc/nixos/ add .
+						git -C /etc/nixos/ commit -m "$commit_msg"
+						git -C /etc/nixos/ push
+					else
+						echo "No commit message provided. Skipping commit."
+					fi
+
+					rm -rf ~/.cache/ksycoca6_*
+					kbuildsycoca6
+				fi
 			'';
 			update = "sudo nix flake update /etc/nixos/";
 			ssh = "kitten ssh";
@@ -59,5 +73,6 @@
 		adwaita-icon-theme
 		krita
 		nix-output-monitor
+		blender
 	];
 }
