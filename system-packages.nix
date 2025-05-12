@@ -23,6 +23,7 @@
 			ep = "sudo nvim /etc/nixos/system-packages.nix";
 			rebuild = "sudo nixos-rebuild switch";
 			update = "sudo nix flake update /etc/nixos/";
+			ssh = "kitten ssh";
 		};
 		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 	};
