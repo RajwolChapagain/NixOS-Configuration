@@ -47,7 +47,7 @@
 							echo -e "\n✏️ No commit message provided. Skipping commit."
 						fi
 					else
-						echo -e "\n🤷‍♂️ No changes detected"
+						echo -e "🤷‍♂️ No changes detected\n"
 					fi
 
 					rm -rf ~/.cache/ksycoca6_*
