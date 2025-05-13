@@ -28,18 +28,26 @@
 				sudo nixos-rebuild switch |& nom
 
 				if [[ $? -eq 0 ]]; then
-					echo -e "\n🎉 Rebuild successful! Summary of changes: "
-					git -C /etc/nixos diff
+					echo -e "\n🎉 Rebuild successful!"
 
-					echo -e "\n💬 Enter a commit message: "
-					read commit_msg
-					
-					if [[ -n "$commit_msg" ]]; then
-						git -C /etc/nixos/ add .
-						git -C /etc/nixos/ commit -m "$commit_msg"
-						git -C /etc/nixos/ push
+					git -C /etc/nixos diff --quiet
+
+					if [[ $? -neq 0 ]]; then
+						echo -e "\n🗒️ Summary of changes: "
+						git -C /etc/nixos diff
+
+						echo -e "\n💬 Enter a commit message: "
+						read commit_msg
+						
+						if [[ -n "$commit_msg" ]]; then
+							git -C /etc/nixos/ add .
+							git -C /etc/nixos/ commit -m "$commit_msg"
+							git -C /etc/nixos/ push
+						else
+							echo "No commit message provided. Skipping commit."
+						fi
 					else
-						echo "No commit message provided. Skipping commit."
+						echo -e "\n🤷‍♂️ No changes detected"
 					fi
 
 					rm -rf ~/.cache/ksycoca6_*
