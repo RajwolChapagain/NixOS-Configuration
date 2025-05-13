@@ -47,7 +47,7 @@
 							echo -e "\n✏️ No commit message provided. Skipping commit."
 						fi
 					else
-						echo -e "🤷‍♂️ No changes detected\n"
+						echo -e "🤷‍♂️ No changes detected.\n"
 					fi
 
 					rm -rf ~/.cache/ksycoca6_*
@@ -86,6 +86,5 @@
 		adwaita-icon-theme
 		krita
 		nix-output-monitor
-		blender
 	];
 }
