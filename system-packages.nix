@@ -21,6 +21,19 @@
 			ls = "eza --icons";
 			ec = "nvim /etc/nixos/configuration.nix";
 			ep = "nvim /etc/nixos/system-packages.nix";
+
+			# Lots of funky things happening inside this rebuild alias.
+			# So, here's a breakdown:
+
+			# ➤ We do "sudo true" first because if we don't, then nom
+			#	supresses the sudo password input prompt if we use sudo
+			#	for the first time in "sudo nixos-rebuild switch |& nom".
+			# ➤ "set -o pipefail" causes "$?" to account for the error code
+			#	of "sudo nixos-rebuild switch" instead of just nom's to
+			#	which its output is piped.
+			# ➤ "rm -rf ~/.cache/ksycoca6_*" followed by "kbuildsycoca6" 
+			#	rebuild the kde application menu cache, which fixes 
+			#	broken menu items on rebuild.
 			rebuild = ''
 				sudo true
 
