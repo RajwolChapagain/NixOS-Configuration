@@ -32,7 +32,7 @@
 
 					git -C /etc/nixos diff --quiet
 
-					if [[ $? -neq 0 ]]; then
+					if [[ $? -ne 0 ]]; then
 						echo -e "\n🗒️ Summary of changes: "
 						git -C /etc/nixos diff
 
@@ -44,7 +44,7 @@
 							git -C /etc/nixos/ commit -m "$commit_msg"
 							git -C /etc/nixos/ push
 						else
-							echo "No commit message provided. Skipping commit."
+							echo -e "\n✏️ No commit message provided. Skipping commit."
 						fi
 					else
 						echo -e "\n🤷‍♂️ No changes detected"
