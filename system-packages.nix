@@ -19,15 +19,17 @@
 		enable = true;
 		shellAliases = {
 			ls = "eza --icons";
-			ec = "sudo nvim /etc/nixos/configuration.nix";
-			ep = "sudo nvim /etc/nixos/system-packages.nix";
-			# The cache clearing + kbuildsycoc6 updates application menu links
+			ec = "nvim /etc/nixos/configuration.nix";
+			ep = "nvim /etc/nixos/system-packages.nix";
 			rebuild = ''
+				sudo true
+
 				set -o pipefail
 				sudo nixos-rebuild switch |& nom
+
 				if [[ $? -eq 0 ]]; then
 					echo -e "\n🎉 Rebuild successful! Summary of changes: "
-					git diff
+					git -C /etc/nixos diff
 
 					echo -e "\n💬 Enter a commit message: "
 					read commit_msg
@@ -44,7 +46,7 @@
 					kbuildsycoca6
 				fi
 			'';
-			update = "sudo nix flake update /etc/nixos/";
+			update = "nix flake update /etc/nixos/";
 			ssh = "kitten ssh";
 		};
 		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
@@ -76,5 +78,6 @@
 		adwaita-icon-theme
 		krita
 		nix-output-monitor
+		blender
 	];
 }
