@@ -99,5 +99,6 @@
 		adwaita-icon-theme
 		krita
 		nix-output-monitor
+		zoom-us
 	];
 }
