@@ -67,7 +67,7 @@
 					kbuildsycoca6
 				fi
 			'';
-			update = "nix flake update /etc/nixos/";
+			update = "nix flake update --flake /etc/nixos/";
 			ssh = "kitten ssh";
 		};
 		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
