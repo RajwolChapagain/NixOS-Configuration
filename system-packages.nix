@@ -83,9 +83,15 @@
 
 	programs.bat.enable = true;
 
+	programs.git = {
+		enable = true;
+		config = {
+			init.defaultBranch = "main";
+		};
+	};
+
 	environment.systemPackages = with pkgs; [
 		neovim
-		git
 		kitty
 		thunderbird
 		keepassxc
