@@ -106,5 +106,6 @@
 		krita
 		nix-output-monitor
 		zoom-us
+		protonvpn-cli
 	];
 }
