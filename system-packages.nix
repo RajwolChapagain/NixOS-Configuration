@@ -92,8 +92,20 @@
 
 	programs.kdeconnect.enable = true;
 
+	programs.neovim = {
+		enable = true;
+		configure.customRC = ''
+			set number
+			set relativenumber
+			set tabstop=4
+			set shiftwidth=4
+			colorscheme lunaperche
+			set foldmethod=marker
+			set foldmarker=<<<,>>>
+		'';
+	};
+
 	environment.systemPackages = with pkgs; [
-		neovim
 		kitty
 		thunderbird
 		keepassxc
