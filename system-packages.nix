@@ -109,5 +109,6 @@
 		nix-output-monitor
 		zoom-us
 		protonvpn-gui
+		kdePackages.kcalc
 	];
 }
