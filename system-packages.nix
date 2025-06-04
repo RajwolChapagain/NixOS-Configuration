@@ -105,6 +105,11 @@
 		'';
 	};
 
+	virtualisation.podman = {
+		enable = true;
+		dockerCompat = true;
+	};
+
 	environment.systemPackages = with pkgs; [
 		kitty
 		thunderbird
@@ -123,5 +128,6 @@
 		protonvpn-gui
 		kdePackages.kcalc
 		unityhub
+		distrobox
 	];
 }
