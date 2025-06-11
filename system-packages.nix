@@ -130,5 +130,6 @@
 		unityhub
 		distrobox
 		vscode
+		prismlauncher
 	];
 }
