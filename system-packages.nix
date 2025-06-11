@@ -129,5 +129,6 @@
 		kdePackages.kcalc
 		unityhub
 		distrobox
+		vscode
 	];
 }
