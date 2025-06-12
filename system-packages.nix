@@ -131,5 +131,6 @@
 		distrobox
 		vscode
 		prismlauncher
+		libreoffice
 	];
 }
