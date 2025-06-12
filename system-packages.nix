@@ -131,6 +131,6 @@
 		distrobox
 		vscode
 		prismlauncher
-		libreoffice
+		libreoffice-qt
 	];
 }
