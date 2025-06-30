@@ -106,10 +106,7 @@
 	};
 
 	virtualisation = {
-		virtualbox.host = {
-			enable = true;
-			enableKvm = false;
-		};
+		virtualbox.host.enable = true;
 
 		podman = {
 			enable = true;
