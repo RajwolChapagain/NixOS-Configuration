@@ -48,8 +48,6 @@
 		extraGroups = [ "wheel" "networkmanager" ];
 	};
 
-	users.extraGroups.vboxusers.members = [ "rajwol" ];
-
 	fonts.packages = with pkgs; [
 		nerd-fonts.symbols-only
 	];
