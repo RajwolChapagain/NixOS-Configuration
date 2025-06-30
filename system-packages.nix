@@ -105,9 +105,13 @@
 		'';
 	};
 
-	virtualisation.podman = {
-		enable = true;
-		dockerCompat = true;
+	virtualisation = {
+		virtualbox.host.enable = true;
+
+		podman = {
+			enable = true;
+			dockerCompat = true;
+		};
 	};
 
 	environment.systemPackages = with pkgs; [
