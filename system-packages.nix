@@ -132,5 +132,6 @@
 		vscode
 		prismlauncher
 		libreoffice-qt
+		davinci-resolve
 	];
 }
