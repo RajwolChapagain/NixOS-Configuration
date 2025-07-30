@@ -133,5 +133,6 @@
 		prismlauncher
 		libreoffice-qt
 		davinci-resolve
+		grayjay
 	];
 }
