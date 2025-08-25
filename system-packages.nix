@@ -127,7 +127,6 @@
 		zoom-us
 		protonvpn-gui
 		kdePackages.kcalc
-		unityhub
 		distrobox
 		vscode
 		prismlauncher
