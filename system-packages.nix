@@ -133,5 +133,6 @@
 		libreoffice-qt
 		davinci-resolve
 		lutris
+		bibata-cursors
 	];
 }
