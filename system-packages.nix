@@ -94,15 +94,20 @@
 
 	programs.neovim = {
 		enable = true;
-		configure.customRC = ''
-			set number
-			set relativenumber
-			set tabstop=4
-			set shiftwidth=4
-			colorscheme lunaperche
-			set foldmethod=marker
-			set foldmarker=<<<,>>>
-		'';
+		configure = {
+			customRC = ''
+				set number
+				set relativenumber
+				set tabstop=4
+				set shiftwidth=4
+				colorscheme lunaperche
+				set foldmethod=marker
+				set foldmarker=<<<,>>>
+			'';
+			packages.myVimPackage = with pkgs.vimPlugins; {
+				start = [ LazyVim ];
+			};
+		};
 	};
 
 	virtualisation.podman = {
