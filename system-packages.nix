@@ -139,5 +139,6 @@
 		davinci-resolve
 		lutris
 		bibata-cursors
+		blender
 	];
 }
