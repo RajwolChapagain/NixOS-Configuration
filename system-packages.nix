@@ -140,6 +140,5 @@
 		lutris
 		bibata-cursors
 		blender
-		docker-client
 	];
 }
