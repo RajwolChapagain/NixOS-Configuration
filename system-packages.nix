@@ -100,13 +100,11 @@
 				set relativenumber
 				set tabstop=4
 				set shiftwidth=4
+				set expandtab
 				colorscheme lunaperche
 				set foldmethod=marker
 				set foldmarker=<<<,>>>
 			'';
-			packages.myVimPackage = with pkgs.vimPlugins; {
-				start = [ LazyVim ];
-			};
 		};
 	};
 
