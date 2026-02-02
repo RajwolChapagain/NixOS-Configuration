@@ -45,7 +45,7 @@
 
 	users.users.rajwol = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "networkmanager" "podman"];
+		extraGroups = [ "wheel" "networkmanager" "docker"];
 	};
 
 	fonts.packages = with pkgs; [
