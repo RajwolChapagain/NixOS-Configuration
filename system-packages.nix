@@ -137,5 +137,6 @@
 		lutris
 		bibata-cursors
 		blender
+        gimp
 	];
 }
