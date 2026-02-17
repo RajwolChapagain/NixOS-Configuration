@@ -138,5 +138,6 @@
 		bibata-cursors
 		blender
         gimp
+        slack
 	];
 }
