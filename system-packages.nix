@@ -139,5 +139,6 @@
 		blender
         gimp
         slack
+        tree
 	];
 }
