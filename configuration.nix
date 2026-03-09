@@ -39,6 +39,8 @@
 		jack.enable = true;
 	};
 
+    services.onedrive.enable = true;
+
 	users.defaultUserShell = pkgs.zsh;
 
 	users.users.rajwol = {
