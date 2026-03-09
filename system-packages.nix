@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, pkgs-unstable, ... }:
 {
 	nixpkgs.config.allowUnfree = true;
 
@@ -125,7 +124,7 @@
 		keepassxc
 		eza
 		zsh-powerlevel10k
-		godot
+		pkgs-unstable.godot
 		github-desktop
 		vlc
 		signal-desktop
