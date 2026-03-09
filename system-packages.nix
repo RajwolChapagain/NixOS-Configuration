@@ -30,11 +30,11 @@
 			# ➤ "set -o pipefail" causes "$?" to account for the error code
 			#	of "sudo nixos-rebuild switch" instead of just nom's to
 			#	which its output is piped.
+			# ➤ The OneDrive service makes a symlink unmanaged by NixOS.
+            #   Hence, we need to re-enable it after rebuilding.
 			# ➤ "rm -rf ~/.cache/ksycoca6_*" followed by "kbuildsycoca6" 
 			#	rebuild the kde application menu cache, which fixes 
 			#	broken menu items on rebuild.
-			# ➤ The OneDrive service makes a symlink unmanaged by NixOS.
-            #   Hence, we need to re-enable it after rebuilding.
 			rebuild = ''
 				sudo true
 
@@ -64,13 +64,13 @@
 						echo -e "🤷‍♂️ No changes detected.\n"
 					fi
 
-					rm -rf ~/.cache/ksycoca6_*
-					kbuildsycoca6
-
                     echo -e "Re-enabling OneDrive Service.\n"
                     systemctl --user disable onedrive@onedrive.service
                     systemctl --user enable onedrive@onedrive.service
                     systemctl --user start onedrive@onedrive.service
+
+					rm -rf ~/.cache/ksycoca6_*
+					kbuildsycoca6
 				fi
 			'';
 			update = "nix flake update --flake /etc/nixos/";
