@@ -133,11 +133,8 @@
 		vscode
 		prismlauncher
 		libreoffice-qt
-		davinci-resolve
-		lutris
 		bibata-cursors
 		blender
-        gimp
         slack
         tree
 	];
