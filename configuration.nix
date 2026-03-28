@@ -38,6 +38,7 @@
         User = "rajwol";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone bisync /home/rajwol/OneDrive onedrive: \
+            --exclude "Personal Vault/**" \
             --conflict-resolve newer \
             --resilient \
             --log-file /home/rajwol/bisync.log
