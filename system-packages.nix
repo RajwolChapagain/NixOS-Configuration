@@ -131,6 +131,7 @@
 		distrobox
 		vscode
 		prismlauncher
+        rclone
 		libreoffice-qt
 		bibata-cursors
 		blender
