@@ -35,7 +35,7 @@
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];
       serviceConfig = {
-        User = "youruser";
+        User = "rajwol";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone bisync /home/rajwol/OneDrive onedrive: \
             --conflict-resolve newer \
