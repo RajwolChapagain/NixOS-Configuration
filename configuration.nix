@@ -30,6 +30,30 @@
 
 	services.desktopManager.plasma6.enable = true;
 
+    systemd.services.rclone-bisync = {
+      description = "rclone bisync";
+      after = [ "network-online.target" ];
+      wants = [ "network-online.target" ];
+      serviceConfig = {
+        User = "youruser";
+        ExecStart = ''
+          ${pkgs.rclone}/bin/rclone bisync /home/rajwol/OneDrive onedrive: \
+            --conflict-resolve newer \
+            --resilient \
+            --log-file /home/rajwol/bisync.log
+        '';
+        Type = "oneshot";
+      };
+    };
+
+    systemd.timers.rclone-bisync = {
+      wantedBy = [ "timers.target" ];
+      timerConfig = {
+        OnBootSec = "30s";
+        OnUnitActiveSec = "30s";
+      };
+    };
+
 	security.rtkit.enable = true;
 	services.pipewire = {
 		enable = true;
