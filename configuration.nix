@@ -51,8 +51,8 @@
     systemd.timers.rclone-bisync = {
       wantedBy = [ "timers.target" ];
       timerConfig = {
-        OnBootSec = "30s";
-        OnUnitActiveSec = "30s";
+        OnBootSec = "2min";
+        OnUnitActiveSec = "2min";
       };
     };
 
