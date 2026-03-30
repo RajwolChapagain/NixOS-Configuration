@@ -40,10 +40,10 @@
           ${pkgs.rclone}/bin/rclone bisync /home/rajwol/OneDrive onedrive: \
             --exclude "Personal Vault/**" \
             --conflict-resolve newer \
-            --resilient \
-            --log-file /home/rajwol/bisync.log
+            --resilient
         '';
         Type = "oneshot";
+        OnFailure = "rclone-bisync-notify.service";
       };
     };
 
@@ -52,6 +52,15 @@
       timerConfig = {
         OnBootSec = "30s";
         OnUnitActiveSec = "30s";
+      };
+    };
+
+    systemd.services.rclone-bisync-notify = {
+      serviceConfig = {
+        User = "rajwol";
+        Type = "oneshot";
+        Environment = "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus";
+        ExecStart = "${pkgs.libnotify}/bin/notify-send 'rclone bisync failed'";
       };
     };
 
