@@ -40,7 +40,8 @@
           ${pkgs.rclone}/bin/rclone bisync /home/rajwol/OneDrive onedrive: \
             --exclude "Personal Vault/**" \
             --conflict-resolve newer \
-            --resilient
+            --resilient \
+            --log-level INFO
         '';
         Type = "oneshot";
         OnFailure = "rclone-bisync-notify.service";
