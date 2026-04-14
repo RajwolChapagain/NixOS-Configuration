@@ -81,10 +81,18 @@
 		extraGroups = [ "wheel" "networkmanager" "docker"];
 	};
 
-	fonts.packages = with pkgs; [
-		nerd-fonts.symbols-only
-        noto-fonts
-	];
+	fonts = {
+        packages = with pkgs; [
+            nerd-fonts.symbols-only
+            noto-fonts
+        ];
+
+        fontconfig = {
+            defaultFonts = {
+                serif = [ "Noto Serif Devanagari" ];
+            };
+        };
+    };
 
 	environment.sessionVariables = {
 		NIXOS_OZONE_WL = "1";
