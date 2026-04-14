@@ -108,35 +108,36 @@
 	};
 
 	virtualisation.docker = {
-            enable = true;
+        enable = true;
 	};
 
 	environment.systemPackages = with pkgs; [
-		kitty
-		thunderbird
-		keepassxc
-		eza
-		zsh-powerlevel10k
-		pkgs-unstable.godot
-		github-desktop
-		vlc
-		signal-desktop
-		inkscape
-		adwaita-icon-theme
-		krita
-		nix-output-monitor
-		zoom-us
-		protonvpn-gui
-		kdePackages.kcalc
-		distrobox
-		vscode
-		prismlauncher
-        rclone
-		libreoffice-qt
-		bibata-cursors
-		blender
-        slack
-        tree
+        adwaita-icon-theme
+        audacity
+        bibata-cursors
+        blender
+        distrobox
+        eza
         gimp
+        github-desktop
+        inkscape
+        kdePackages.kcalc
+        keepassxc
+        kitty
+        krita
+        libreoffice-qt
+        nix-output-monitor
+        pkgs-unstable.godot
+        prismlauncher
+        protonvpn-gui
+        rclone
+        signal-desktop
+        slack
+        thunderbird
+        tree
+        vlc
+        vscode
+        zoom-us
+        zsh-powerlevel10k
 	];
 }
