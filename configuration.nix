@@ -83,6 +83,7 @@
 
 	fonts.packages = with pkgs; [
 		nerd-fonts.symbols-only
+        noto-fonts
 	];
 
 	environment.sessionVariables = {
