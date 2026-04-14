@@ -90,6 +90,7 @@
         fontconfig = {
             defaultFonts = {
                 serif = [ "Noto Serif Devanagari" ];
+                sansSerif = [ "Noto Sans Devanagari" ];
             };
         };
     };
