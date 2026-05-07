@@ -136,6 +136,8 @@
         slack
         thunderbird
         tree
+        uget
+        uget-integrator
         vlc
         vscode
         zoom-us
