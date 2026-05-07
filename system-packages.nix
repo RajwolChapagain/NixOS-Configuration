@@ -10,6 +10,7 @@
 			"widget.use-xdg-desktop-portal.file-picker" = 1;
 			"media.hardware-video-decoding.force-enabled" = true;
 		};
+        nativeMessagingHosts.packages = with pkgs; [ uget-integrator ];
 	};
 
 	programs.dconf.enable = true;
