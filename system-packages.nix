@@ -123,6 +123,7 @@
         github-desktop
         inkscape
         kdePackages.kcalc
+        kdePackages.kdenlive
         keepassxc
         kitty
         krita
