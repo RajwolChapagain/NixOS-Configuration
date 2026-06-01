@@ -10,8 +10,6 @@
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 
-    boot.loader.systemd-boot.extraEntries."ubuntu.conf" = '' title Ubuntu efi /EFI/ubuntu/shimx64.efi '';
-
 	networking.hostName = "nixos";
 	networking.networkmanager.enable = true;
 
