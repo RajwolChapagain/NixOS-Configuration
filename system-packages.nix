@@ -112,6 +112,8 @@
         enable = true;
 	};
 
+    virtualisation.virtualbox.host.enable = true;
+
 	environment.systemPackages = with pkgs; [
         adwaita-icon-theme
         audacity
