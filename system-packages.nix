@@ -137,6 +137,7 @@
         rclone
         signal-desktop
         slack
+        steamcmd
         thunderbird
         tree
         uget
