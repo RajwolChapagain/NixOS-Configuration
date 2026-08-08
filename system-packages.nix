@@ -133,7 +133,7 @@
         nix-output-monitor
         pkgs-unstable.godot
         prismlauncher
-        protonvpn-gui
+        proton-vpn
         rclone
         signal-desktop
         slack

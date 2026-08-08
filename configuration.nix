@@ -1,25 +1,9 @@
 { config, lib, pkgs, ... }:
-
 let
-sddm-astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "japanese_aesthetic";  # or any other theme
-        themeConfig = {
-# Customize colors and settings
-            HeaderTextColor = "#d5c4a1";
-            Background = "Backgrounds/your-custom-background.png";
-# ... other theme configuration options
-        };
-};
-#  }).overrideAttrs (oldAttrs: {
-# Optional: Inject custom background image
-#    installPhase = oldAttrs.installPhase + ''
-#      chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
-#      cp ${./relative/path/to/your-custom-background.png} \
-#        $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
-#    '';
-#  });
+  sddm-astronaut = pkgs.sddm-astronaut.override {
+    embeddedTheme = "pixel_sakura";
+  };
 in
-
 {
 	imports = [ 
 		./hardware-configuration.nix
@@ -40,11 +24,10 @@ in
 
 	services.xserver.videoDrivers = [ "nvidia" ];
 
-    environment.systemPackages = [ sddm-astronaut ];
-
     services.displayManager.sddm = {
         enable = true;
         extraPackages = with pkgs; [
+            sddm-astronaut
             kdePackages.qtmultimedia # Required for video backgrounds/audio
         ];
         theme = "sddm-astronaut-theme";
@@ -126,6 +109,11 @@ in
 		MOZ_USE_XINPUT2 = "1";
 		EDITOR = "nvim";
 	};
+
+    environment.systemPackages = with pkgs; [
+        sddm-astronaut
+        kdePackages.qtmultimedia
+    ];
 
 	environment.plasma6.excludePackages = with pkgs.kdePackages; [
 		elisa
