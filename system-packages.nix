@@ -15,6 +15,11 @@
 
 	programs.dconf.enable = true;
 
+    programs.localsend = {
+        enable = true;
+        openFirewall = true;
+    };
+
 	programs.zsh = {
 		enable = true;
 		shellAliases = {
@@ -130,7 +135,6 @@
         kitty
         krita
         libreoffice-qt
-        localsend
         nix-output-monitor
         pkgs-unstable.godot
         prismlauncher
