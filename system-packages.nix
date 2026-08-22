@@ -130,6 +130,7 @@
         kitty
         krita
         libreoffice-qt
+        localsend
         nix-output-monitor
         pkgs-unstable.godot
         prismlauncher
