@@ -141,12 +141,9 @@
         proton-vpn
         rclone
         signal-desktop
-        slack
         steamcmd
         thunderbird
         tree
-        uget
-        uget-integrator
         vlc
         vscode
         zoom-us
