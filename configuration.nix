@@ -87,7 +87,7 @@ in
 
 	users.users.rajwol = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "networkmanager" "docker"];
+		extraGroups = [ "wheel" "networkmanager"];
 	};
 
 	fonts = {
