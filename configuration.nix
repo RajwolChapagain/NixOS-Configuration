@@ -21,6 +21,7 @@ in
 
 	hardware.bluetooth.enable = true;
 	hardware.bluetooth.powerOnBoot = true;
+    hardware.nvidia-container-toolkit.enable = true;
 
 	services.xserver.videoDrivers = [ "nvidia" ];
 
